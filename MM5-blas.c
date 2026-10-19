@@ -129,7 +129,7 @@ int main()
   lasttime = current_time_in_microseconds();
 
   cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
-	     SZ, SZ, SZ, 1.0, A, SZ, B, SZ, 1.0, C, SZ);
+	      SZ, SZ, SZ, 1.0, (const double *)A, SZ, (const double *)B, SZ, 1.0, (const double *)C, SZ);
   
   time = ((double)(current_time_in_microseconds()-lasttime))/1000000;
   mflops = SZ*(SZ*(SZ*2.0))/time;
