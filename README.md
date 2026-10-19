@@ -14,6 +14,7 @@ To run them:
 For your amusement, I also provide MM5-blas, which uses the OpenBLAS library to achieve somewhat higher performance.  
 The OpenBLAS library automatically uses multiple cores.  To limit it to a single core, use:
 ```bash
+  sudo apt install libopenblas-dev
   make -f Makefile-blas clean
   make -f Makefile-blas
   setenv OPENBLAS_NUM_THREADS 1
